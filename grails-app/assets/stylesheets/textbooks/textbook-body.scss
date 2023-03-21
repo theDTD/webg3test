@@ -1,0 +1,193 @@
+@import "variables";
+
+html, body {
+  overflow-x: hidden;
+}
+
+.textbook-body {
+  font-size: 14px;
+  color: $new-black;
+  font-weight: 400;
+  padding-bottom: 50px;
+
+  h2 {
+    color: #470A68;
+    font-size: 28px;
+    margin: 40px 0px 0px 0px;
+    &.color1 {
+      color: #470A68;
+    }
+    &.color2 {
+      color: #470A68;
+    }
+  }
+  h3 {
+    color: #1E1A34;
+    font-size: 22px;
+    &.color1 {
+      color: #470A68;
+    }
+  }
+
+  hr {
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    @media (min-width: 768px) {
+      &.hidden-desktop {
+        display: none;
+      }
+    }
+  }
+
+  a {
+    color: #0065ab;
+  }
+  a:focus {
+    outline: dotted #0065ab 1px;
+  }
+
+  .card {
+    border: solid 5px #d1d1d1;
+    border-radius: 0;
+    font-size: 13px;
+    padding: 10px;
+
+    .card-title {
+      margin: 0; padding: 0 0 10px 0;
+      color: #470A68;
+      font-size: 20px;
+      font-weight: 300;
+    }
+
+    .btn-trackorder {
+      color: #0065ab;
+      border: none;
+      background: none;
+      font-size: 20px;
+
+      .fas {
+        color: #0065ab;
+        font-size: 26px;
+        font-weight: 600;
+        vertical-align: top;
+        margin-top: 2px;
+
+        @media not all and (min-resolution:.001dpcm)
+        { @supports (-webkit-appearance:none) {
+              margin-top: 5px;
+        }}
+      }
+
+      &:hover { text-decoration: underline; }
+      &:focus {
+        outline: dotted #0065ab 1px;
+      }
+    }
+
+    label {
+      width: 200px;
+    }
+
+    input {
+      margin: 12px 0; padding: 1px 5px;
+      font: 400 12px Arial;
+      height: 28px;
+      color: #999;
+      border: solid 1px #A9A9A9;
+      width: 100%;
+    }
+  }
+
+  .steps {
+    color: #470A68;
+    text-align: center;
+
+    &.full-height {
+      height: 100%;
+    }
+
+    .step1, .step2, .step3, .step4 {
+      height: 156px;
+      width: 115px;
+      margin: auto;
+      background-repeat: no-repeat;
+      background-position-x: center;
+      position: relative;
+
+      div {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+
+    .step1 {
+      background-image: url("https://images.valorebooks.com/images/vb/web/purchase/howworks_stepOne.jpg");
+      background-size: 102px 132px;
+    }
+
+    .step2 {
+      background-image: url("https://images.valorebooks.com/images/vb/web/purchase/howworks_stepTwo.jpg");
+      background-size: 109px 114px;
+    }
+
+    .step3 {
+      background-image: url("https://images.valorebooks.com/images/vb/web/purchase/howworks_stepThree.jpg");
+      background-size: 104px 115px;
+    }
+    .step4 {
+      background-image: url("https://images.valorebooks.com/images/vb/web/sellback/RentTextbooks/howworks_stepOne.jpg");
+      background-size: 115px 118px;
+    }
+
+    @media screen and (max-device-width: 472px) {
+      .step1, .step2, .step3, .step4 {
+        height: 140px;
+        font-size: 0.9em;
+      }
+      .step1 {
+        background-size: 75px 100px;
+      }
+      .step2 {
+        background-size: 83px 85px;
+      }
+      .step3 {
+        background-size: 82px 85px;
+      }
+      .step4 {
+        background-size: 88px 88px;
+      }
+    }
+    @media screen and (max-device-width: 330px) {
+      .step1, .step2, .step3, .step4 {
+        height: 100px;
+        div { font-size: 0.8em; letter-spacing: 0.1px; }
+      }
+      .step1 {
+        background-size: 55px 75px;
+      }
+      .step2 {
+        background-size: 63px 65px;
+      }
+      .step3 {
+        background-size: 62px 65px;
+      }
+      .step4 {
+        background-size: 68px 63px;
+      }
+    }
+  }
+
+  .unordered-list {
+    list-style: none;
+    margin: 0; padding: 0;
+
+    li {
+      margin-top: 8px;
+    }
+  }
+  .seal {
+    width: 136px; height: 136px;
+    margin: 0 20px;
+  }
+}

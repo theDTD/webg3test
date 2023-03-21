@@ -1,0 +1,94 @@
+@mixin moneyformat($fontsize) {
+  font-size:$fontsize;
+  line-height: 1.2em;
+
+  @if $fontsize > 22 {
+    span{
+      font-size:.7em;
+      vertical-align:text-top;
+    }
+  }
+}
+
+//--- BOX SIZING -------------------------------------------------------------------
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model; // Safari <= 5
+  -moz-box-sizing: $box-model; // Firefox <= 19
+  box-sizing: $box-model;
+}
+
+//--- Border Radius -------------------------------------------------------------------
+@mixin border-radius($topleft, $topright: $topleft, $bottomright: $topleft, $bottomleft: $topleft) {
+  -moz-border-radius: $topleft $topright $bottomright $bottomleft;
+  -webkit-border-radius:          $topleft $topright $bottomright $bottomleft;
+  border-radius:                  $topleft $topright $bottomright $bottomleft;
+}
+
+//--- BACKGROUND GRADIENTS -------------------------------------------------------------------
+@mixin background-gradient($startColor, $endColor) {
+  background-color: $endColor;
+  background-image: -moz-linear-gradient(top, $startColor, $endColor); // FF 3.6+
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from($startColor), to($endColor)); // Safari 4+, Chrome 2+
+  background-image: -webkit-linear-gradient(top, $startColor, $endColor); // Safari 5.1+, Chrome 10+
+  background-image: -o-linear-gradient(top, $startColor, $endColor); // Opera 11.10
+  background-image: linear-gradient(to bottom, $startColor, $endColor); // Standard, IE10
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($startColor)}', endColorstr='#{ie-hex-str($endColor)}', GradientType=0); // IE9 and down
+}
+
+//--- Border Shadow -------------------------------------------------------------------
+@mixin box-shadow-mixin($shadow1, $shadow2:false, $shadow3:false) {
+  $shadows: $shadow1;
+  @if $shadow2 { $shadows: $shadow1, $shadow2; }
+  @if $shadow3 { $shadows: $shadow1, $shadow2, $shadow3; }
+  -webkit-box-shadow: $shadows;
+  -moz-box-shadow: $shadows;
+  box-shadow: $shadows;
+}
+
+//--- TRIANGLES --------------------------------------------------------------------------------
+@mixin triangle ($size, $color, $direction) {
+  height: 0;
+  width: 0;
+
+  @if ($direction == up) or ($direction == down) or ($direction == right) or ($direction == left) {
+    border-color: transparent;
+    border-style: solid;
+    border-width: $size / 2;
+
+    @if $direction == up {
+      border-bottom-color: $color;
+
+    } @else if $direction == right {
+      border-left-color:   $color;
+
+    } @else if $direction == down {
+      border-top-color:    $color;
+
+    } @else if $direction == left {
+      border-right-color:  $color;
+    }
+  }
+
+  @else if ($direction == up-right) or ($direction == up-left) {
+    border-top: $size solid $color;
+
+    @if $direction == up-right {
+      border-left:  $size solid transparent;
+
+    } @else if $direction == up-left {
+      border-right: $size solid transparent;
+    }
+  }
+
+  @else if ($direction == down-right) or ($direction == down-left) {
+    border-bottom: $size solid $color;
+
+    @if $direction == down-right {
+      border-left:  $size solid transparent;
+
+    } @else if $direction == down-left {
+      border-right: $size solid transparent;
+    }
+  }
+}

@@ -1,0 +1,3 @@
+<script type="text/javascript">
+    var bbbprotocol = ( ("https:" == document.location.protocol) ? "https://" : "http://" ); (function(){var s=document.createElement('script');s.src=bbbprotocol + 'seal-arkansas.bbb.org' + unescape('%2Flogo%2Fvalore-campus-90387402.js');s.type='text/javascript';s.async=true;var st=document.getElementsByTagName('script');st=st[st.length-1];var pt=st.parentNode;pt.insertBefore(s,pt.nextSibling);})();
+</script>

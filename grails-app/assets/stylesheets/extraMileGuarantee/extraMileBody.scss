@@ -1,0 +1,36 @@
+@import "../textbooks/variables";
+
+.extra-mile-guarantee {
+  .container {
+    max-width: 940px;
+    .guarantee-image-container {
+      max-width: 850px;
+      margin-right:auto;
+      margin-left: auto;
+    }
+
+    .guarantee-text  {
+      max-width: 698px;
+
+      h1 {
+        color: $new-purple;
+        font-size: 36px;
+        font-weight: 100;
+      }
+      p {
+        color: $new-black;
+        font-size: 18px;
+        margin-right: 40px;
+        margin-left:  40px;
+        margin-bottom: 28px;
+
+        span {
+          font-size: 22px;
+          line-height: 24px;
+          text-align: left;
+          color: $new-purple;
+        }
+      }
+    }
+  }
+}

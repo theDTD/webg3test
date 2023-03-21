@@ -1,0 +1,21 @@
+@import "../textbooks/variables";
+
+.btn-primary {
+  background-color :$new-purple;
+  border-color: $new-purple;
+  border: 6px solid $new-purple;
+  font-weight: 400;
+  font-size: 20px;
+  &:hover, &:active, &:focus  {
+    background-color: white;
+    color:$new-purple;
+    border-color: $new-purple;
+    font-weight: 400;
+    font-size: 20px;
+  }
+  &:focus {
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+  }
+}

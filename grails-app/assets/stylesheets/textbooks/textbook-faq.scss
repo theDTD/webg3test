@@ -1,0 +1,139 @@
+@import "variables";
+
+.textbook-faq {
+    font-size: 14px;
+    color: #333;
+    font-weight: 400;
+    background: #F5F5D2;
+    padding: 40px 0;
+    box-shadow: 0 2px 2px rgb(226,228,136) inset;
+  
+    a { color: #470A68; text-decoration: none; }
+  
+    ul {
+      list-style: none;
+      padding: 0; margin: 0;
+    }
+  
+    .faq-list-menu {
+      padding-bottom: 11px;
+      li {
+        font-size: 18px;
+        padding-bottom: 11px;
+        border-color: #470A68;
+        &:last-child{
+          padding-top: 11px;
+        }
+      }
+      .active {
+        color: rgb(51,51,51);
+      }
+    }
+  
+    #faq-tab2 {
+      li {
+        font-size: 14px;
+        a { text-decoration: underline; }
+  
+        @media all and (max-device-width: 768px) {
+          margin-bottom: 1em;
+        }
+      }
+    }
+  
+    .faq-content {
+      font-size: 16px;
+  
+      h2 {
+        color: #470A68;
+        font-size: 28px;
+      }
+  
+      p {
+        color: rgb(9,60,94);
+        font-size: 14px;
+        span {
+          color: #000;
+          &.p-head {
+            font-size: 18px;
+            display:block;
+            color: #470A68;
+          }
+        }
+      }
+  
+      @media (max-width: 768px) {
+        h2 {
+          display: none;
+        }
+      }
+      .rental-wrapper {
+        margin-top: 1.25rem;
+        .book-wrapper {
+          margin-bottom: 1rem;
+          .book {
+            display: grid;
+            grid-template-columns: 100px calc(100% - (100px + 1rem));
+            grid-template-rows: 1fr 1fr;
+            gap: 0px 1rem;
+            grid-auto-flow: row;
+            grid-template-areas:
+      "book-cover book-details"
+      "book-cover book-details";
+            margin-right: 1rem;
+            @media (max-width: 767px ) {
+              margin-right: 0;
+              padding: 0 1rem;
+            }
+            .book-cover {
+              grid-area: book-cover;
+              img {
+                width: 100px;
+                height: 150px;
+              }
+            }
+            .book-details {
+              grid-area: book-details;
+              .title {
+                font-size: 1rem;
+                line-height: 20px;
+                padding-bottom: 10px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: block;
+                margin: 0;
+                @media (max-width: 767px ) {
+                  white-space: break-spaces;
+                }
+              }
+              .author {
+                color: $new-black;
+                font-size: 0.88rem;
+                margin: 0;
+              }
+              .list-price,
+              .list-price span,
+              .savings-text {
+                font-size: 0.81rem;
+                color: #999999;
+                font-style: italic;
+                margin: 0;
+              }
+              .rent-text {
+                color: $new-black;
+                line-height: 20px;
+                margin: 0;
+                .rent-value {
+                  color: #470A68;
+                  font-size: 1.12rem;
+                  text-decoration: none;
+                  font-style: normal;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }

@@ -1,0 +1,453 @@
+/////////////////  PRODUCT DETAILS SECTION WIDGET //////////////////////////
+.product-details-section {
+  line-height: 1.4em;
+
+  &.show{
+    @include gradient-vertical(#dcdcdc, #fff, 0%, 8%);
+  }
+
+  &.showcontact{
+    .main-contact{
+      display: block;
+    }
+
+    .details-wrapper{
+      @include make-md-column(5);
+    }
+
+    #DetailInfo, #DetailSummary{
+      width:100%!important;
+    }
+  }
+  .reviewTotals{
+    margin: 0;
+  }
+  a{
+    margin-bottom: 10px;
+  }
+
+  .details-wrapper{
+    overflow: hidden;
+
+    @include make-md-column(12);
+    padding-bottom: 20px;
+
+    @media (max-width: $screen-sm-max) {
+      padding: 0 20px;
+
+      .readShowMore{
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .main-contact{
+    background:#fff;
+    padding:20px 0;
+    display:none;
+    margin-bottom:20px;
+
+    label.error{
+      color:#da7737;
+      @include make-md-column(8);
+      @include make-xs-column(12);
+      @include make-md-column-offset(4);
+    }
+
+    @media (min-width: $screen-md-min){
+      border:solid 1px $gray-lighter;
+      margin-right: 7px;
+      float:right;
+      border-top: none;
+      padding-top: 15px;
+      @include gradient-vertical(#dcdcdc, #fff, 0%, 3%);
+      width: 524px;
+    }
+
+    .asktext{
+      font-size:34px;
+      line-height: 1.4em;
+    }
+
+    .formgroup{
+      margin-bottom:10px;
+
+      label{
+        @media (min-width: $screen-md-min){
+          padding-left:0;
+          line-height: 40px;
+        }
+      }
+
+      input[type="text"], textarea{
+        border:solid 1px $gray-light;
+        height:40px;
+      }
+
+      textarea{
+        height:200px;
+      }
+    }
+  }
+  article{
+    margin-bottom: 5px;
+  }
+  h3 {
+    margin: 20px 0 0;
+    color: $newBrandPurple;
+  }
+  li {
+    margin: 2px 0;
+  }
+  .ratings-star {
+    margin: 20px 0 3px;
+  }
+  .reviewTotals{
+    display: block;
+  }
+  .authors {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: $screen-md-min) {
+    border-top: 1px solid #d2d2d2;
+    margin-top: 25px;
+    margin-bottom: 20px;
+
+    .dropdown-toggle{
+      margin-bottom: 10px;
+    }
+    h3 {
+      margin-top: 0;
+    }
+    ul {
+      float: right
+    }
+    .authors {
+      width: 100%;
+    }
+    .ratings-star {
+      display: inline-block;
+      margin: 2px 5px 0 0;
+    }
+    .reviewTotals{
+      display: inline-block;
+    }
+    #dropdown {
+      display: block;
+    }
+  }
+}
+
+/////////////////  MARKETPLACE PRICES WIDGET //////////////////////////
+.marketplacePrices {
+  line-height: 1.3em;
+  h2 {
+    color: $newBrandPurple;
+  }
+
+  .market-list-head{
+    padding-bottom:20px;
+  }
+  #rentals-info-link{
+    display: none;
+  }
+  .market-list {
+    border-top: 4px solid $gray-lighter;
+    border-left: solid 1px $gray-lighter;
+    border-right: solid 1px $gray-lighter;
+    padding-top: 20px;
+  }
+  .market-list-nav{
+    height:45px;
+    clear:both;
+    margin-top:50px;
+
+    > div{
+      cursor:pointer;
+      height:100%;
+      position: relative;
+
+      &.active {
+        p, span {
+          color: $newBrandPurple;
+        }
+
+        &:after, &:before {
+          display: block;
+          content: '';
+          height: 0;
+          width: 0;
+          border: solid 10px transparent;
+          border-top: solid 10px $gray-lighter;
+          position: absolute;
+          left: 50%;
+          bottom: -24px;
+          margin-left: -10px;
+        }
+
+        &:before {
+          border-top: solid 10px #fff;
+          z-index: 2;
+          bottom: -20px;
+        }
+      }
+    }
+  }
+  .market-list-table {
+    width: 100%;
+
+    .dropDown .styledSelect {
+
+    }
+
+    td {
+      border-right: solid 1px $gray-lighter;
+      padding: 25px 30px 15px;
+      max-width: 400px;
+      vertical-align: middle;
+      position: relative;
+
+      &:last-child {
+        border-right: none;
+      }
+      .rec-badge{
+        margin: 5px -10px 0 0;
+
+        hr{
+          margin: 3px 0;
+        }
+      }
+      .open-tab{
+        padding-top: 1px;
+      }
+      .quantity1 {
+        display: block;
+        padding-top: 7px;
+        font-size: 22px;
+        color: $newBrandPurple;
+      }
+    }
+
+    tr {
+      border-top: solid 1px $gray-lighter;
+
+      &.summary-separator{
+        border-top: solid 1px $gray-lighter;
+
+        &:first-child{
+          border: none;
+
+          td{
+            padding: 0;
+          }
+        }
+        td{
+          padding: 20px 0 0 0;
+        }
+      }
+    }
+
+    .moneyformat {
+      font-size: 37px;
+    }
+
+    .rec-badge {
+      position: absolute;
+      right: 10px;
+      top: 0;
+    }
+  }
+  .marketplace-tab p{
+    margin-bottom: 3px;
+  }
+  .product-cta-link{
+    margin-top:20px;
+    display:inline-block;
+    background: none;
+    border: none;
+    color: $new-orange-dark;
+
+    i{
+      font-size:.9em;
+    }
+  }
+
+  .market-list-footer{
+    background:$newBrandPurple;
+    color:#fff;
+    padding:10px;
+    text-align: center;
+    position: relative;
+    margin-bottom:20px;
+    min-height: 60px;
+
+    a{
+      color:#fff;
+    }
+    .market-list-info{
+      position: absolute;
+      left:20px;
+      line-height: 35px;
+    }
+  }
+}
+
+/////////////////  CUSTOMER REVIEWS WIDGET //////////////////////////
+.customerReviews{
+  line-height: 1.3em;
+
+  &.show{
+    @include gradient-vertical(#dcdcdc, #fff, 0%, 8%);
+  }
+  @media (min-width: $screen-md-min) {
+    padding-bottom: 20px;
+  }
+  .customer-star-rating {
+    margin: 15px auto;
+  }
+  .text-center{
+    clear: both;
+  }
+  .review:nth-child(3n+2){
+    clear:left
+  }
+  .readShowMore {
+    .summary {
+      max-height: 110px;
+    }
+    p{
+      margin-bottom: 3px;
+    }
+  }
+  .space{
+    display: block;
+    padding: 3px 0 2px;
+  }
+  .review {
+    .reviewName {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block;
+      width: 188px;
+      line-height: 23px;
+    }
+    .ratings-star {
+      float: left;
+      margin-top: 3px;
+    }
+  }
+}
+
+/////////////////  QUESTION & GUARANTEE WIDGET //////////////////////////
+.question-guarantee-section {
+  margin-bottom: 30px;
+  padding-top: 30px;
+
+  h3 {
+    margin: 0 0 8px;
+    font-size: 19px;
+  }
+  p {
+    line-height: 1.4em;
+  }
+  img {
+    text-align: center;
+    display: block;
+    margin: 0 auto 30px;
+  }
+  .question-widget {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+
+    p {
+      margin: 0 0 8px;
+    }
+
+  }
+
+  @media (min-width: $screen-md-min) {
+    padding-top: 15px;
+    margin-top: 0;
+
+    h3 {
+      font-size: 22px;
+    }
+    img {
+      margin: 0 auto 15px;
+    }
+    .question-widget {
+      border: none;
+      margin-top: 40px;
+    }
+    .guarantee-widget {
+      text-align: center;
+    }
+  }
+}
+
+//////////////READ MORE TOGGLE
+.readShowMore {
+  clear: both;
+
+  &.open {
+    .summary {
+      max-height: 100%;
+    }
+  }
+  .summary {
+    max-height: 98px;
+    position: relative;
+    overflow: hidden;
+  }
+  .toLess{
+    display: none;
+  }
+}
+
+//////////////RENT BOX////////////////////
+.rent-box{
+  margin: 50px 0;
+  clear: both;
+  overflow: hidden;
+  display: none;
+
+  &.active{
+    display: block;
+  }
+  h2{
+    font-size: 30px;
+    margin: 0 0 40px;
+  }
+  h3{
+    font-size: 18px;
+    margin: 0 0 30px;
+
+    span{
+      font-size: 38px;
+    }
+  }
+  .addCartLink{
+    margin-top: 9px;
+    display: inline-block;
+    background: none;
+    border: none;
+    color: $newBrandPurple;
+
+    i{
+      float: right;
+      line-height: 25px;
+    }
+  }
+
+  @media (min-width: $screen-md-min) {
+    h2{
+      font-size: 46px;
+    }
+    h3{
+      font-size: 22px;
+    }
+  }
+}

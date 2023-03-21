@@ -1,0 +1,244 @@
+@import "../textbooks/variables";
+@import "../textbooks/buttons";
+
+.view-order-content {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+
+  form {
+    @media (min-width: 768px) {
+      width: 90%;
+      padding-left: 0;
+    }
+
+    .search-order-header {
+      color: $new-purple;
+      font-size: 23px;
+      font-weight: 400;
+    }
+
+    ul {
+      @media (min-width: 768px) {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+      }
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+
+      .errorMsg {
+        color: #FF6554;
+        font-size: 14px;
+
+        @media (min-width: 768px) {
+          width: 40%;
+          display: inline;
+          margin-left: 5px;
+        }
+      }
+      label {
+        color: $new-purple;
+        border-color: $new-purple;
+        margin-bottom: 5px;
+        @media (min-width: 768px) {
+          display: block;
+        }
+
+        a {
+          padding-left: 10px;
+        }
+      }
+      @media (min-width: 768px) {
+        input {
+          width: 45%;
+          display: inline;
+        }
+      }
+    }
+
+    h1 {
+      font-size: 36px;
+      color: $new-black;
+      font-weight: 300;
+    }
+
+    .submitContainer {
+      max-width: 275px;
+      margin-right:auto;
+      margin-left: auto;
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .errorMsg {
+        color: #FF6554;
+        font-size: 14px;
+        text-align: center;
+        @media (min-width: 768px) {
+          text-align: left;
+          margin-left: 5px;
+          width: 40%;
+          margin-left: 5px;
+          flex-grow: 1;
+        }
+      }
+
+      .answersText {
+        color: $new-purple;
+        text-align: center;
+        @media (min-width: 768px) {
+          text-align: left;
+        }
+      }
+
+      @media (min-width: 768px) {
+        max-width: unset;
+        margin-right:unset;
+        margin-left: unset;
+        justify-content: start;
+        align-items: center;
+        flex-flow: row wrap;
+
+        button {
+          width: 38%;
+        }
+      }
+    }
+  }
+  .sideInfo {
+    @media (min-width: 768px) {
+      flex-grow: 1;
+    }
+  }
+}
+
+//View Order Dialog
+html {
+  position: relative;
+}
+.viewOrder-dialog-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-color: rgba(119, 119, 119, 0.8);
+  .viewOrder-dialog-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    .viewOrder-dialog {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      z-index: 1102;
+      width: 100%;
+      max-width: 580px;
+      background-color: #FFFFFF;
+      padding: 1.5rem 1rem;
+      border: 5px solid $new-light-gray;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+      @media (max-width: 599px) {
+        width: 90%;
+      }
+      button.purple {
+        box-sizing: border-box;
+        color: #FFFFFF;
+        background-color: $new-purple;
+        padding: 0.5rem;
+        border: 3px solid $new-purple;
+        flex-basis: 30%;
+        font-size: 0.9rem;
+        @media (max-width: 599px) {
+          width: 60%;
+        }
+        &:hover {
+          color: $new-purple;
+          border: 3px solid $new-purple;
+          background-color: #FFFFFF;
+          font-weight: 500;
+        }
+      }
+      p + button {
+        width: 20%!important;
+        @media (max-width: 599px) {
+          width: 30%!important;
+        }
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        p {
+          text-align: center;
+        }
+      }
+      i {
+        font-size: 1.5rem;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        border: 2px solid #FFFFFF;
+        border-radius: 100px;
+        position: absolute;
+        top: -17px;
+        right: -17px;
+        background-color: #FFFFFF;
+        cursor: pointer;
+      }
+      h3 {
+        font-size: 1.875rem;
+        text-align: center;
+        color: $new-purple;
+      }
+      .viewOrder-form-wrapper {
+        width: 90%;
+        .viewOrder-error {
+          color: $new-orange;
+        }
+        .viewOrder-formContainer {
+          width: 90%;
+          @media (max-width: 599px) {
+            display: flex;
+            flex-direction: column-reverse;
+          }
+          label {
+            @media (max-width: 599px) {
+              margin-bottom: 1rem;
+            }
+          }
+          .viewOrder-inputWrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1rem;
+            @media (max-width: 599px) {
+              flex-direction: column;
+            }
+            input {
+              margin-right: 1rem;
+              border-radius: 100px;
+              border: 1px solid #8b8b8b;
+              padding: 10px 13px;
+              width: 100%;
+              flex-basis: 70%;
+              @media (max-width: 599px) {
+                margin-right: 0;
+                margin-bottom: 1rem;
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

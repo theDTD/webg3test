@@ -1,0 +1,32 @@
+.ratings-star{
+  position:relative;
+  display:inline-block;
+
+  .ratings-top{
+    color:$newBrandRed;
+    position:absolute;
+    top:0;
+    z-index:2;
+    height:1em;
+    white-space:nowrap;
+    overflow: hidden;
+
+    $rating: 0;
+
+    @while $rating <= 100 {
+      &.r#{$rating} {
+        width: $rating * 1%;
+        $rating: $rating + 5
+      }
+    }
+  }
+
+  .ratings-bottom{
+    color:$gray-light;
+    z-index:1;
+  }
+}
+
+.ratings-star-large{
+  font-size:40px;
+}

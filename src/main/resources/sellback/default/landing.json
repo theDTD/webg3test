@@ -1,0 +1,72 @@
+{
+  "faq": [
+    {
+      "id": 1,
+      "question": "What's an ISBN?",
+      "answer": "ISBN is the acronym for International Standard Book Number. This 10 or 13-digit number identifies a specific book, an edition of a book, or a book-like product (such as an audiobook). An ISBN can usually be found on the back cover, next to the barcode. If a book doesn't show the ISBN on the back cover, look on the page featuring the copyright and publisher information and the ISBN will be found there."
+    },
+    {
+      "id": 2,
+      "question": "How long does it take to get paid?",
+      "answer": "Once your item is received at our warehouse and approved, payment is issued within 14 business days."
+    },
+    {
+      "id": 3,
+      "question": "How can I get paid for selling my book?",
+      "answer": "ValoreBooks supports two methods of payment:\n\nCheck\n\nOnce a check has been issued, you can expect to receive your payment within 7-14 business days. Checks will be sent through USPS first class mail to the address you listed on your sellback order.\n\nPayPal\n\nOnce issued, Paypal payments typically post to your account within 2-14 business days. Payments will be deposited using the email provided during checkout."
+    },
+    {
+      "id": 4,
+      "question": "Where can I drop off my textbook?",
+      "answer": "Drop your books off at any UPS location. And make sure to bring your shipping label, so that you don't have to pay for shipping!"
+    },
+    {
+      "id": 5,
+      "question": "How can I check whether you've received my book?",
+      "answer": "The best way to track receipt is via the tracking number that UPS provides. To check whether we've received your book, visit the UPS website, and type in the tracking number provided."
+    },
+    {
+      "id": 6,
+      "question": "Who can I call or email if I have questions about my sale?",
+      "answer": "You can reach our Valorebooks customer service at sellbackhelp@valore.com."
+    }
+  ],
+  "how-it-works": [
+    {
+      "id": 1,
+      "icon": "faBook",
+      "header": "Sell your books",
+      "body": "Get an instant quote from ValoreBooks, sell only the textbooks you want to."
+    },
+    {
+      "id": 2,
+      "icon": "faTruck",
+      "header": "Ship for free",
+      "body": "Print your free shipping label and drop your books off at your nearest USPS."
+    },
+    {
+      "id": 3,
+      "icon": "faDollarSign",
+      "header": "Get paid",
+      "body": "Select either PayPal or check to get paid for your textbooks."
+    }
+  ],
+  "header-banner": {
+    "text": "Return to Valorebooks.com",
+    "url": ""
+  },
+  "footer-banner": [
+    {
+      "id": 1,
+      "text": "&copy; &currentYear; ValoreBooks"
+    },
+    {
+      "id": 2,
+      "text": "Contact Support"
+    },
+    {
+      "id": 3,
+      "text": "support@valorebooks.com"
+    }
+  ]
+}

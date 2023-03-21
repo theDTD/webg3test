@@ -1,0 +1,22 @@
+.breadcrumb{
+	padding:0;
+	background:none;
+	color:$gray;
+
+	> li + li:before{
+	  content: "\e258";
+	  position: relative;
+	  top: 1px;
+	  display: inline-block;
+	  font-family: 'Glyphicons Halflings';
+	  font-style: normal;
+	  font-weight: normal;
+	  line-height: 1;
+	  -webkit-font-smoothing: antialiased;
+	  -moz-osx-font-smoothing: grayscale;
+	}
+
+	a, a:hover, a:active, a:visited{
+		color:$gray;
+	}
+}

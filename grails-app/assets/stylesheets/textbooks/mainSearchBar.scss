@@ -1,0 +1,236 @@
+@import "variables";
+
+.mainSearchBar {
+    background-color: #EAE8E5;
+    padding-bottom: 30px;
+
+    @media (min-width: 768px) {
+        min-height: 375px;
+    }
+
+    .defaultHeading1 {
+        font-size: 34px;
+        color: #470A68;
+        text-align: center;
+
+        @media (min-width: 768px) {
+           font-size: 66px;
+        }
+
+        .rent-textbook-heading {
+            color: #d9e033;
+            margin-bottom:0px;
+
+            @media (min-width: 576px) {
+                font-weight: 300;
+            }
+        }
+    }
+
+    .sub-heading {
+        font-size: 10px;
+        font-weight: 300;
+        color: #1E1A34;
+        margin-top:-5px;
+        text-align: center;
+
+        @media (min-width: 768px) {
+            font-size: 18px;
+        }
+
+        .rent-textbook-subheading {
+            color:white;
+            font-size: 0.95rem;
+            padding-bottom: .5rem!important;
+            padding-left:5px;
+            padding-top:0;
+            font-weight: 400;
+
+            @media (min-width: 576px) {
+                font-weight: 400;
+            }
+        }
+    }
+
+    .main-search-container {
+        height: 50px;
+        border-radius: 25px;
+        background-color: #fff;
+        background-image: linear-gradient(to bottom, #D1D2D4, #fff);
+        background-repeat: repeat-x;
+        border: 3px solid #71254c;
+        form {
+            height: 100% !important;
+        }
+    }
+
+    .search-btn {
+        background-color: transparent;
+        border: none;
+        color: #093d5b;
+        font-size: 1.3em;
+    }
+    .search-btn:focus {
+        outline: dotted #093d5b 1px;
+    }
+
+    .search-input {
+        background-color: unset;
+        border: none;
+        border-radius: 25px;
+        padding: 0 10px;
+        line-height: 44px;
+
+        @media (min-width: 768px) {
+            width: calc(100% - 165px);
+        }
+    }
+
+    .no-results-error {
+        color: #FF6554;
+        max-width: 80%;
+        padding: 0.57143em 0;
+        font-size: 0.75rem;
+        line-height: 1.57143em;
+        margin: 1rem auto 0 auto;
+
+        @media (max-width: 768px) {
+            margin-top: 1.8rem;
+        }
+    }
+
+    .rb-no-results-error {
+        color: #dc3545;
+        max-width: 80%;
+        padding: 0.57143em 0;
+        font-size: 0.825rem;
+        line-height: 1.57143em;
+
+    }
+
+    .isbn-dark-blue .isbn-link{
+        @media (max-width: 767px) {
+            color: #093d5b;
+        }
+    }
+
+    .isbn-link {
+        display: block;
+        top: 55px;
+        right: 0;
+        font-size: 13px;
+        color: #606060;
+
+        @media (min-width: 768px) {
+            display: block;
+            top: 12px;
+            right: 76px;
+        }
+    }
+
+    .margin-top-search {
+        margin-top: -64px;
+
+        @media (min-width: 416px) {
+            margin-top: -104px;
+        }
+
+        @media (min-width: 992px) {
+            margin-top: -50px;
+        }
+    }
+
+    .search-row {
+        width: 100%;
+        @media (min-width: 500px) {
+            width: 60%;
+        }
+    }
+
+    .search-center {
+       justify-content: center;
+    }
+
+    .search-left {
+        justify-content: center;
+        @media (min-width: 992px) {
+            justify-content: start;
+        }
+    }
+
+    .search-right {
+        justify-content: center;
+        @media (min-width: 992px) {
+            justify-content: flex-end;
+        }
+    }
+
+    .main-text-align-center {
+        align-items: center!important;
+    }
+
+    .main-text-align-left {
+        align-items: center!important;
+        @media (min-width: 992px) {
+            align-items: start!important;
+        }
+    }
+
+    .main-text-align-right {
+        align-items: center!important;
+        @media (min-width: 992px) {
+            align-items: flex-end!important;
+        }
+    }
+
+    .light-green {
+       color: #d9e033;
+    }
+
+    .border-default {
+        border-color: #71254c;
+    }
+
+    .h6 {
+        @media (max-width: 500px) {
+           font-size: .75rem;
+        }
+    }
+
+    .search-subtext {
+        padding: 0.5rem;
+        text-align: left;
+
+        @media (min-width: 767px) {
+            text-align: center;
+        }
+
+        @media (min-width: 992px) {
+            padding: 1rem!important;
+            text-align: left;
+        }
+
+        .return-rental-text {
+            @media (max-width: 568px) {
+                font-weight: 500;
+            }
+
+            a.h3 {
+                @media (max-width: 768px) {
+                    font-size: 0.95rem;
+                    font-weight: 700;
+                }
+            }
+
+        }
+    }
+
+    .rent-textbook-search {
+        background-color: white !important;
+        border-color: #d9e033 !important;
+        background-image: unset;
+        .search-input {
+            background-color: white !important;
+        }
+    }
+}

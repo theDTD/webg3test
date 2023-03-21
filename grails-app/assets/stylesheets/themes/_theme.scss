@@ -1,0 +1,207 @@
+body{
+  font-family: $font-family-sans-serif;
+  font-weight: $light;
+  font-size:$font-size-base;
+  background: #fff;
+}
+.marketing-page{
+  background: #fff;
+}
+
+// needed for ng-cloak to work because we load angular below the body instead of in the head
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+#siteloader{
+  a{
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
+  .iframe-container{
+    position: relative;
+    padding-top: 35px;
+    height: 1630px;
+    overflow: hidden;
+
+    @media (min-width: 336px) {
+      height: 1600px;
+    }
+
+    @media (min-width: 364px) {
+      height: 1580px;
+    }
+
+    @media (min-width: 397px) {
+      height: 1550px;
+    }
+
+    @media (min-width: 581px) {
+      height: 1565px;
+    }
+
+    @media (min-width: 631px) {
+      height: 1580px;
+    }
+
+    @media (min-width: 704px) {
+      height: 1550px;
+    }
+
+    @media (min-width: $screen-sm-min) {
+      height: 1555px;
+    }
+  }
+  iframe{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.hideOnLoad{
+  display: none;
+}
+.btnLink{
+  display: block;
+}
+.width-pagemax{
+  width: 100%;
+  margin: 0 auto;
+  @include box-sizing(border-box);
+
+  @media (min-width: $screen-md-min) {
+    width: 920px;
+  }
+}
+.cf:before,
+.cf:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+.no-pad-left{
+  padding-left: 0;
+}
+.no-pad-right{
+  padding-right: 0;
+}
+
+.noUnderline{
+  &:active,&:hover,&:focus{
+    text-decoration: none;
+  }
+}
+//////Borders
+.border-primary{
+  border:solid 5px $gray-lighter;
+}
+
+.border-thin{
+  border:solid 1px $gray-lighter;
+}
+
+.border-bottom-thin{
+  border-bottom:solid 1px $gray-lighter;
+}
+
+.border-top-thin{
+  border-top:solid 1px $gray-lighter;
+}
+
+
+//////Positioning
+.relative{
+  position:relative;
+}
+
+
+/////Colors
+.gray{
+  color: $gray;
+}
+.gray-light{
+  color:$gray-light;
+}
+
+.gray-dark{
+  color:$gray-dark;
+}
+
+.blue-dark{
+  color:$blue-dark;
+}
+
+.orange{
+  color:$orange;
+}
+
+.orange-dark {
+  color: $new-orange-dark;
+}
+
+.blue{
+  color:$blue;
+}
+
+.purple{
+  color:$purple;
+}
+
+.yellow{
+  color:$yellow;
+}
+
+.white{
+  color:$white;
+}
+
+/// 7 Col workaround
+@media (min-width: $screen-md-min) {
+  .seven-cols .col-md-1,
+  .seven-cols .col-sm-1,
+  .seven-cols .col-lg-1 {
+    width: 14.285714285714285714285714285714%;
+    *width: 14.285714285714285714285714285714%;
+  }
+}
+//brand colors
+.newBrandPurple {
+  color: $newBrandPurple;
+}
+
+a.newBrandPurple {
+  &:hover {
+    color: $newBrandRed;
+  }
+}
+
+.newBrandDarkBlue{
+  color: $newBrandDarkBlue;
+}
+
+.newBrandRed{
+  color: $newBrandRed;
+}
+
+.newBrandDarkOrange {
+  color: $new-orange-dark;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+button {
+  font-family: $font-family-poppins !important;
+}

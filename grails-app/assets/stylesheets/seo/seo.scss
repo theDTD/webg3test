@@ -1,0 +1,17 @@
+#seoEditContent {
+  #container {
+    #content {
+      padding: 10px;
+
+      label { display: block; }
+      input, textarea {
+        margin-bottom: 5px;
+        min-width: 300px;
+      }
+
+      form > div {
+        margin: 3px 0;
+      }
+    }
+  }
+}

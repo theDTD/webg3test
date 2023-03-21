@@ -1,0 +1,158 @@
+@import "../textbooks/variables";
+.buyTextBookHeader {
+  .container {
+    max-width: 920px;
+  }
+
+  i {
+    color: $new-purple!important;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+    @media (max-width: 767px) {
+      color: $white!important;
+      transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+    }
+  }
+
+  .bg-brand-primary {
+    background-color: $new-purple;
+  }
+
+  .search-input {
+    border-radius: 25px;
+  }
+
+  .search-btn {
+    background-color: transparent;
+    border: none;
+    color: $new-purple;
+    &:hover, &:active {
+      color: $new-orange;
+    }
+    &:focus {
+      outline: dotted $new-purple 1px;
+    }
+  }
+
+  .logo-main {
+    height: auto;
+    width: 100%;
+    max-width: 151px;
+    display: block;
+    padding: 0 .5em;
+
+
+    @media (max-width: 992px) {
+      margin-top: -10px;
+
+      svg {
+        width: 150px;
+      }
+    }
+  }
+
+  .sub-links a {
+    color: white;
+    font-family: $font-family-poppins;
+    &:focus {
+      outline: dotted #66afe9 1px;
+    }
+  }
+
+  .mobile-links a {
+    font-size: .85em;
+    font-weight: 400;
+
+    @media (max-width: 767px) {
+      color: $new-purple;
+    }
+  }
+
+  .top-links a, .top-links span {
+    font-size: .85em;
+    font-weight: 400;
+    color: $new-purple;
+    font-family: $font-family-poppins;
+  }
+
+  .top-links a:hover {
+    text-decoration: underline;
+  }
+
+  .top-links a:focus {
+    outline: dotted $brand-primary 1px;
+  }
+
+  .right-arrow {
+    margin-left: 8px !important;
+    color:$white!important;
+    &:hover {
+      color: $new-orange!important;
+    }
+  }
+
+  .sub-links a:hover, .sub-links a:active,
+  .mobile-links a:hover, .mobile-links a:active {
+    color: $new-orange!important;
+    i {
+      transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+      color: $new-orange!important;
+    }
+  }
+
+  .search-bar-container {
+    background-color: $white;
+    height: 30px;
+    width: 360px;
+    border-radius: 30px;
+    .search-input {
+      height: 30px;
+      border: none;
+      font-size: 0.85rem;
+    }
+  }
+
+  .logo-icon-container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .buyTextBookHeader, .mobile-links, .mobile-search-bar {
+    -webkit-box-shadow: 0 5px 5px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 5px 5px 0px rgba(0,0,0,0.2);
+    box-shadow: 0 5px 5px 0px rgba(0,0,0,0.2);
+  }
+
+  @media (max-width: 992px) {
+    .sub-links a {
+      padding-right: 1px;
+    }
+    .logo-link {
+      height: 28px;
+      margin-top: 20px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .logo-icon-container {
+      padding-right: 6px;
+      max-width: unset;
+      padding-top:.25rem!important;
+      padding-bottom:.25rem!important;
+      .icon-nav {
+        .btn {
+          padding-left: 6px;
+        }
+      }
+    }
+
+    .search-bar-container {
+      margin: 5px;
+    }
+
+    .buyTextBookHeader, .mobile-links, .mobile-search-bar {
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+    }
+  }
+}

@@ -1,0 +1,742 @@
+html, body {
+  margin: 0;
+}
+
+@media only screen and (max-width: 812px) {
+  html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+  }
+  .hide-desktop {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 813px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+.clearfix {
+  clear: both;
+}
+
+.faq-section {
+  background: #F9F9F9;
+  margin-bottom: 52px;
+  padding-bottom: 52px;
+}
+
+@media only screen and (max-width: 812px) {
+  .faq-section {
+    margin-bottom: 0;
+  }
+}
+
+h2.faq-header {
+  margin: 0;
+  padding: 0.83em 0;
+  font-family: 'BogleWeb-Bold', sans-serif;
+}
+
+.faq-questions {
+  border-top: 1px solid;
+  border-color: #E6E7E8;
+  margin: 0 60px;
+  text-align: left;
+}
+@media only screen and (max-width: 812px) {
+  .faq-questions {
+    margin: 0 13px;
+  }
+}
+
+.faq-item-question {
+  border-bottom: 1px solid;
+  border-color: #E6E7E8;
+  color: #000000;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 15px 0;
+}
+
+.faq-item-question-text {
+  display: inline-block;
+  max-width: 90%;
+}
+
+.faq-item-chevron {
+  float: right;
+  padding-right: 5px;
+}
+
+.faq-item-answer {
+  border-bottom: 1px solid;
+  border-color: #E6E7E8;
+  color: #414042;
+  font-size: 16px;
+  padding: 20px 20px 20px 40px;
+  white-space: pre-line;
+}
+
+.sellback-landing-container {
+  font-family: 'BogleWeb-Regular', sans-serif;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 1360px;
+}
+
+.search-container {
+  width: auto;
+  margin-bottom: 33px;
+  display: block;
+}
+
+.search-bar-container {
+  background-color: #006697;
+  display: table-cell;
+  height: auto;
+  width: 510px;
+  padding: 52px 30px;
+  color: #FFFFFF;
+  text-align: left;
+  font-size: 18px;
+  vertical-align: top;
+}
+@media only screen and (max-width: 812px) {
+  .search-bar-container {
+    width: calc(100% - 46px);
+    padding: 20px 23px;
+    height: 100%;
+    display: block;
+  }
+}
+.search-bar-container .instant-quote-text {
+  font-size: 36px;
+  padding-right: 82px;
+  margin-bottom: 12px;
+}
+.search-bar-container .enter-isbn-text {
+  font-size: 18px;
+  margin-bottom: 12px;
+  font-family: 'BogleWeb-Bold', sans-serif;
+}
+
+.search-bar-container .isbn-form {
+  font-size: 18px;
+  margin-bottom: 16px;
+  display: flex;
+}
+.search-bar-container .isbn-form .isbn-input {
+  width: calc(100% - 75px);
+  height: 44px;
+  font-size: 18px;
+  font-family: 'BogleWeb-Regular', sans-serif;
+  border: none;
+  border-bottom: 4px solid #FFC220;
+  padding-left: 12px;
+  margin-right: 13px;
+  outline: none;
+}
+.search-bar-container .isbn-form .isbn-submit {
+  width: 48px;
+  height: 48px;
+  border: 1px solid #FFFFFF;
+  opacity: 1;
+  border-radius: 100px;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  background-color: #006697;
+  color: #FFFFFF;
+  vertical-align: middle;
+  outline: none;
+  cursor: pointer;
+}
+.search-bar-container .isbn-form .isbn-submit .isbn-submit-icon {
+  font-size: 22px;
+  line-height: 26px;
+}
+.search-bar-container .isbn-description {
+  font-size: 16px;
+}
+.search-bar-container .isbn-description a {
+  color: #FFFFFF;
+}
+
+.search-image {
+  display: table-cell
+}
+.search-image img {
+  display: block;
+  width: 100%;
+  height: 375px;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 812px) {
+  .search-container {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .search-bar-container .instant-quote-text {
+    padding-right: 21px;
+  }
+  .search-bar-container .isbn-form .isbn-submit {
+    margin: auto 0;
+    vertical-align: middle;
+  }
+  .search-image {
+    width: 100%;
+    display: block;
+  }
+  .search-image img {
+    height: auto;
+  }
+}
+
+/** header css */
+.main-header {
+  margin-bottom: 14px;
+  width: 100%;
+}
+.logo {
+  float: left;
+  height: 58px;
+}
+.header-account-container {
+  margin-top: 20px;
+  float: right;
+  cursor: pointer;
+}
+.header-image {
+  margin-right: 9px;
+}
+.header-text {
+  font-size: 14px;
+  font-family: 'BogleWeb-Bold', sans-serif;
+  float: right;
+  margin-top: 5px;
+}
+.header-content {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 812px) {
+  .logo {
+    margin-left: 14px;
+  }
+  .header-image {
+    margin-right: 28px;
+  }
+}
+
+.header-banner-hide {
+  display: none !important;
+}
+.header-banner {
+  height: 32px;
+  background-color: #041E42;
+  opacity: 1;
+  text-align: left;
+  padding-left: 27px;
+  margin-bottom: 17px;
+}
+.header-banner-retsym {
+  font-family: 'BogleWeb-Regular', sans-serif;
+  font-size: 14px;
+  color: #FFFFFF;
+  display: inline-block;
+  margin-right: 11px;
+  margin-top: 5px;
+}
+.header-banner-text {
+  font-family: 'BogleWeb-Regular', sans-serif;
+  font-size: 14px;
+  color: #FFFFFF;
+  display: inline-block;
+  margin-top: 6px;
+}
+.header-banner-text a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.header-banner-text:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 812px) {
+  .header-banner {
+    text-align: center;
+    padding-left: 0;
+  }
+  .header-banner-retsym {
+    margin: auto;
+    margin-right: 11px;
+  }
+  .header-banner-text {
+    margin: auto;
+    margin-top: 6px;
+  }
+}
+
+/* Tooltip */
+.tooltip-ex { /* Container for our tooltip */
+  position: relative;
+  display: inline-block;
+}
+.tooltip-ex .tooltip-ex-link {
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+.tooltip-ex .tooltip-ex-text { /* This is for the tooltip text */
+  visibility: hidden;
+  width: 350px;
+  background-color: #006697;
+  color: white;
+  text-align: left;
+  padding: 10px;
+  border-radius: 10px; /* This defines tooltip text position */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip-ex:hover .tooltip-ex-text { /* Makes tooltip text visible when text is hovered on */
+  visibility: visible;
+}
+
+@media only screen and (max-width: 480px) {
+  .tooltip-ex .tooltip-ex-text {
+    display: flex;
+    width: 230%;
+  }
+}
+
+.footer {
+  text-align: left;
+  border-top: 1px solid #E6E7E8;
+}
+.footer-inner-container {
+  margin-top: 36px;
+}
+.footer-text-float-left {
+  text-align: left;
+  font-size: 16px;
+  color: #000000;
+  opacity: 1;
+}
+.footer-text-float-right {
+  font-size: 16px;
+  color: #000000;
+  opacity: 1;
+  float: right;
+}
+.footer-contact-text {
+  font-family: 'BogleWeb-Bold', sans-serif;
+  margin-right: 10px;
+}
+@media only screen and (max-width: 812px) {
+  .footer {
+    margin: 34px 13px 26px 13px;
+  }
+  .footer-text-float-left {
+    float: none;
+    display: block;
+    margin: 0 auto;
+    font-size: 14px;
+    max-width: 209px;
+  }
+  .footer-text-float-right {
+    float: none;
+    display: block;
+    text-align: center;
+    margin-bottom: 23px;
+  }
+}
+
+/** how it works css **/
+.how-it-works-section {
+  width: 1400px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 813px) {
+  .how-it-works-text-title {
+    font-size: 24px;
+  }
+  .how-it-works-text-body {
+    font-size: 16px;
+  }
+  .how-it-works-icon {
+    font-size: 40px;
+  }
+  .how-it-works-box-col-left {
+    float: left;
+    max-width: 60px;
+    margin-right: 34px;
+  }
+  .how-it-works-box-col-right {
+    float: left;
+    width: calc(100% - 94px);
+  }
+  .how-it-works-rows {
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+  }
+  .how-it-works-box {
+    margin: 0.45rem;
+    margin-bottom: -10px;
+  }
+  .how-it-works-title {
+    font-size: 26px;
+  }
+}
+@media only screen and (max-width: 812px) {
+  .how-it-works-text-title {
+    font-size: 20px;
+  }
+  .how-it-works-text-body {
+    font-size: 14px;
+  }
+  .how-it-works-icon {
+    font-size: 32px;
+  }
+  .how-it-works-box-col-left {
+    width: 15%;
+    float: left;
+  }
+  .how-it-works-box-col-right {
+    float: left;
+    margin-left: 10px;
+    width: 80%
+  }
+  .how-it-works-rows {
+    flex-direction: column;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+  }
+  .how-it-works-title {
+    font-size: 20px;
+  }
+}
+/** desktop **/
+@media only screen and (min-width: 813px) {
+  .how-it-works-box {
+    width: 400px;
+  }
+}
+.how-it-works-text-title {
+  text-align: left;
+  font-family: 'BogleWeb-Regular', sans-serif;
+}
+.how-it-works-text-body {
+  text-align: left;
+  font-family: 'BogleWeb-Regular', sans-serif;
+}
+.how-it-works-title {
+  text-align: center;
+  font-family: 'BogleWeb-Bold', sans-serif;
+}
+.how-it-works-rows {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+.how-it-works-box {
+  background: #FFFFFF;
+  border: 1px solid #E6E7E8;
+  border-bottom-width: 8px;
+  text-align: left;
+  padding: 25px;
+}
+.how-it-works-box-1 {
+  border-bottom-color: #FA6400;
+}
+.how-it-works-box-2 {
+  border-bottom-color: #3EC5E6;
+}
+.how-it-works-box-3 {
+  border-bottom-color: #FFC220;
+}
+.how-it-works-icon {
+  margin-top: 15px;
+}
+/** list item count **/
+.list-item-count-banner {
+  display: flex;
+  flex: 1;
+  background: #FFFFFF;
+  border: 1px solid #E6E7E8;
+  padding: 12px;
+  padding-left: 20px;
+  text-align: left;
+}
+.list-item-count-banner-text {
+  font-size: 24px;
+  font-family: 'BogleWeb-Bold', sans-serif;
+}
+.list-item-count-banner-text2 {
+  font-size: 24px;
+  font-family: 'BogleWeb-Regular', sans-serif;
+}
+/** cart item container **/
+.sellback-list-container {
+  display: flex;
+}
+/** summary **/
+.summary {
+   float: right;
+   padding: 20px;
+   width: 30%;
+}
+.summary-title {
+   text-align: left;
+   font-size: 24px;
+   font-family: 'BogleWeb-Bold', sans-serif;
+   border-bottom: 1px solid #E6E7E8;
+   padding-bottom: 10px;
+}
+.summary-item {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+}
+.summary-item-left {
+   text-align: left;
+   font-size: 18px;
+   font-family: 'BogleWeb-Regular', sans-serif;
+}
+.summary-item-left-text {
+   vertical-align: middle;
+   white-space: nowrap;
+}
+.summary-item-right {
+   text-align: right;
+   font-size: 36px;
+   font-family: 'BogleWeb-Bold', sans-serif;
+}
+.summary-disclaimer {
+   text-align: left;
+   font-family: 'BogleWeb-Regular', sans-serif;
+}
+.summary-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+}
+.summary-button {
+    width: 90%;
+    height: 50px;
+    background-color: #0065FF;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+  cursor: pointer;
+   a {
+     text-decoration: none;
+   }
+}
+.summary-button-text {
+   color: #FFFFFF;
+   font-size: 18px;
+   font-family: 'BogleWeb-Bold', sans-serif;
+}
+.warning-banner {
+  text-align: left;
+  background-color: #FFF9E9;
+  border: 1px solid #FFC52C;
+  padding: 12px;
+  padding-left: 20px;
+  margin-bottom: 21px;
+}
+.warning-banner-text, .error-banner-text {
+  font-size: 18px;
+}
+.warning-banner-text span {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.error-banner {
+  text-align: left;
+  background-color: #FFEEEE;
+  border: 1px solid #CB3333;
+  padding: 12px;
+  padding-left: 20px;
+  margin-bottom: 21px;
+}
+/** sellback list **/
+.list-item-container {
+  padding: 20px;
+  padding-top: 65px;
+  float: left;
+  width: 70%;
+}
+.list-item {
+  display: flex!important;
+  flex: 1;
+  border-bottom: 1px solid #E6E7E8;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+}
+.list-item-rna {
+  display: flex!important;
+  flex: 1;
+  border-bottom: 1px solid #E6E7E8;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+  background-color: #f7f3f6;
+}
+.list-item-rna-message {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #CB3333;
+}
+.list-item-top-divider {
+  border-top: 1px solid #E6E7E8;
+}
+.list-item-details {
+  display: flex;
+  flex-grow: 1!important;
+  justify-content: space-between!important;
+  font-size: 18px;
+  font-family: 'BogleWeb-Regular', sans-serif;
+  padding-left: 10px;
+}
+.list-item-details-text {
+  text-align: left;
+  margin-bottom: .5rem!important;
+}
+.list-item-price {
+  text-align: right;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.list-item-textbook-title {
+  font-size: 18px;
+  word-break: break-word;
+}
+.list-item-price-text {
+  font-size: 24px;
+}
+.list-item-textbook-title,
+.list-item-price-text {
+  font-family: 'BogleWeb-Bold', sans-serif;
+}
+.list-item-sellback-price-text {
+  font-size: 18px;
+  font-family: 'BogleWeb-Regular', sans-serif;
+  white-space: nowrap;
+}
+.list-item-remove {
+  margin-top: .5rem!important;
+  font-size: 18px;
+  font-family: 'BogleWeb-Regular', sans-serif;
+  text-align: right;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.list-item-image-div {
+  max-width: 110px;
+  height: 120px;
+}
+.list-item-image {
+  max-width: 91px;
+  height: auto;
+}
+@media only screen and (max-width: 812px) {
+  .sellback-list-container,
+  .list-item {
+    flex-flow: wrap;
+  }
+  .list-item-container {
+    padding: 10px;
+    padding-top: 20px;
+    width: 100%;
+    margin-right: unset;
+  }
+  .list-item-details {
+    flex-flow: column;
+    width: 50%;
+  }
+  .list-item-count-banner-text,
+  .list-item-count-banner-text2 {
+    font-size: 18px;
+  }
+  .list-item-textbook-title,
+  .list-item-details,
+  .list-item-remove
+   {
+    font-size: 16px;
+  }
+  .list-item-sellback-price-text {
+    font-size: 14px;
+    text-align: left;
+  }
+  .list-item-price-text {
+    font-size: 20px;
+    text-align: left;
+  }
+  .summary {
+    width: unset;
+  }
+  .summary-title {
+    font-size: 18px;
+  }
+  .summary-item-left {
+    font-size: 16px;
+  }
+  .summary-item-right {
+   font-size: 24px;
+  }
+  .warning-banner, .error-banner {
+    margin: 10px;
+  }
+  .warning-banner-text, .error-banner-text {
+    font-size: 14px;
+  }
+}
+
+.spinner {
+    background: url(../../spinner_big.gif) center center no-repeat;
+    height: 100%;
+    width: 100%;
+    padding: 0.5em;
+    position: fixed;
+    align-items: center;
+    background-color: rgba(255,255,255,0.7);
+}
+
+@font-face {
+  font-family: "BogleWeb-Bold";
+  src: url("https://img.valorebooks.com/fonts/Bogle/BogleWeb-Bold.eot");
+  src: url("https://img.valorebooks.com/fonts/Bogle/BogleWeb-Bold.eot?#iefix") format("embedded-opentype"),
+  url("https://img.valorebooks.com/fonts/Bogle/BogleWeb-Bold.woff2") format("woff2"),
+  url("https://img.valorebooks.com/fonts/Bogle/BogleWeb-Bold.woff") format("woff"),
+  url("https://img.valorebooks.com/fonts/Bogle/BogleWeb-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "BogleWeb-Regular";
+  src: url("https://img.valorebooks.com/fonts/Bogle/BogleWeb-Regular.eot");
+  src: url("https://img.valorebooks.com/fonts/Bogle/BogleWeb-Regular.eot?#iefix") format("embedded-opentype"),
+  url("https://img.valorebooks.com/fonts/Bogle/BogleWeb-Regular.woff2") format("woff2"),
+  url("https://img.valorebooks.com/fonts/Bogle/BogleWeb-Regular.woff") format("woff"),
+  url("https://img.valorebooks.com/fonts/Bogle/BogleWeb-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

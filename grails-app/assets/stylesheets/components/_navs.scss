@@ -1,0 +1,66 @@
+.nav-gray-gradient{
+  li{
+    padding-left: 0;
+    padding-right: 0;
+    font-weight: $normal;
+    @include gradient-vertical(#fff, #e4e5e5, 0%, 100%);
+    display:table;
+
+    @media (max-width: $screen-sm-max) {
+      height:58px;
+    }
+
+    a{
+      @media (max-width: $screen-sm-max) {
+        padding:10px 5px;
+      }
+    }
+
+    &:hover{
+      background:#e5e5e5;
+      background-image:none;
+      background-color:#e5e5e5;
+    }
+
+    &.active{
+      background:$gray-lighter;
+      position: relative;
+      font-size:$font-size-medium;
+
+      @media (min-width: $screen-md-min) {
+        font-size:$font-size-large;
+        font-weight: $semibold;
+      }
+
+      &:after{
+        height:0;
+        width:0;
+        border:solid 20px transparent;
+        border-top:solid 20px $gray-lighter;
+        position: absolute;
+        bottom:-40px;
+        content:'';
+        left:50%;
+        margin-left:-20px;
+      }
+
+      a{
+        color:$purple;
+        outline: none;
+      }
+
+      .price{
+        font-size:$font-size-medium;
+        font-weight: $normal;
+      }
+    }
+
+    @media (min-width: $screen-md-min) {
+      a{
+        height:100%;
+        display:table-cell;
+        vertical-align: middle;
+      }
+    }
+  }
+}

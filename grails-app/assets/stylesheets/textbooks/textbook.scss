@@ -1,0 +1,18 @@
+@import "variables";
+
+/*Shared CSS goes here*/
+body {
+  font-family: $font-family-base;
+}
+
+.container {
+  max-width: 940px;
+}
+
+a { cursor: pointer; }
+
+hr {
+  border: none;
+  height: 1px;
+  background: -webkit-gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, #666));
+}

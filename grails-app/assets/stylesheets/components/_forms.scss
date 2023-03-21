@@ -1,0 +1,277 @@
+// fixes dropdown on ie
+select::-ms-expand {
+  display: none;
+}
+
+// fixes input height on ie
+.box input[type="text"], .box input[type="password"] {
+  height: 29px;
+}
+
+.box input[type="text"][disabled="disabled"]{
+  border: 1px solid #d2d2d2;
+  background: transparent;
+  color: #494949;
+  -webkit-text-fill-color:#494949; /* Override iOS / Android font color change */
+  -webkit-opacity:1; /* Override iOS opacity change affecting text & background color */
+}
+
+.disabled-select{
+  height: 29px;
+  border: 1px solid #d2d2d2;
+  position: relative;
+
+  &.error-field {
+    border: 1px solid $orange;
+  }
+
+  span {
+    display: inline;
+  }
+
+  select{
+    background: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 5px 20px 5px 10px;
+    line-height: 1;
+    border: 0;
+    height: 30px;
+  }
+}
+
+.gray-select{
+  height: 29px;
+  overflow: hidden;
+  background-color: #fff;
+  border: 1px solid #9f9f9f;
+  position: relative;
+  width: auto;
+
+  &:before{
+    content: "\e258";
+    font-family: 'Glyphicons Halflings';
+    position: absolute;
+    right: 4px;
+    top: 8px;
+    color: $newBrandDarkBlue;
+  }
+
+  select{
+    background: transparent;
+    width: 115%;
+    padding: 5px 20px 5px 10px;
+    line-height: 1;
+    border: 0;
+    height: 30px;
+    color: #494949;
+    font-size: 12px;
+    outline: 0;
+    text-shadow: 0 0 0 #000;
+    z-index: 1;
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    &:focus{
+      outline: 0;
+    }
+
+    @media (min-width: $screen-md-min) {
+      font-size: 14px;
+    }
+  }
+}
+
+.styled-select{
+  width: 100%;
+  height: 33px;
+  overflow: hidden;
+  background-color: #fff;
+  background: -moz-linear-gradient(top, #efefef, #fff);
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#efefef), to(#fff));
+  background: -webkit-linear-gradient(top, #efefef, #fff);
+  background: -o-linear-gradient(top, #efefef, #fff);
+  background: linear-gradient(to bottom, #efefef, #fff);
+  border: 1px solid #9b9b9b;
+  margin: 0 0 12px;
+  border-radius: 30px;
+  padding: 1px 5px 0 5px;
+  position: relative;
+  max-width: 200px;
+
+  .disabled {
+    background: linear-gradient(to bottom, #efefef, #f7f3f6);
+  }
+
+  &:before{
+    content: "\e258";
+    font-family: 'Glyphicons Halflings';
+    position: absolute;
+    right: 10px;
+    top: 9px;
+    color: $newBrandPurple;
+  }
+
+  &.quantity{
+    width: 27%;
+  }
+
+  select{
+    background: transparent;
+    width: 115%;
+    padding: 5px;
+    line-height: 1;
+    border: 0;
+    height: 30px;
+    color: $newBrandPurple;
+    font-size: 12px;
+    outline: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-shadow: 0 0 0 #000;
+    z-index: 1;
+    position: relative;
+
+    &:focus{
+      outline: 0;
+    }
+
+    @media (min-width: $screen-md-min) {
+      font-size: 12.5px;
+    }
+  }
+}
+
+.styledSelect{
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:-13px;
+  padding: 7px 13px 7px 13px;
+  font-weight:normal;
+  border-radius: 30px;
+  border: 1px solid #8b8b8b;
+  z-index: 1000;
+  background-color: #fff;
+  background: -moz-linear-gradient(top, #efefef, #fff);
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#efefef), to(#fff));
+  background: -webkit-linear-gradient(top, #efefef, #fff);
+  background: -o-linear-gradient(top, #efefef, #fff);
+  background: linear-gradient(to bottom, #efefef, #fff);
+
+  &:after{
+    content: "\e258";
+    font-family: 'Glyphicons Halflings';
+    display:inline-block;
+    float:right;
+    position: absolute;
+    right:5px;
+    top:7px;
+  }
+}
+
+.dropDown {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  font: normal 14px/22px Arial, Sans-Serif;
+  color: $newBrandPurple;
+  border-radius: 30px;
+  height: 37px;
+  text-align: left;
+  z-index: 1;
+
+  &:active, &.active{
+    .styledSelect {
+      background-color: #fff;
+      background: -moz-linear-gradient(top, #D1D2D4, #fff);
+      background: -webkit-gradient(linear, 0 0, 0 100%, from(#D1D2D4), to(#fff));
+      background: -webkit-linear-gradient(top, #D1D2D4, #fff);
+      background: -o-linear-gradient(top, #D1D2D4, #fff);
+      background: linear-gradient(to bottom, #D1D2D4, #fff);
+      -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+      -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+
+      &:after{
+        content: "\e259";
+      }
+    }
+
+    .options{
+      max-height: 100px;
+      border: 1px solid #ccc;
+      display: block;
+    }
+  }
+
+  .s-hidden {
+    visibility: hidden;
+    margin-right: 18px;
+  }
+
+  .styledSelect {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 7px 13px 7px 13px;
+    font-weight: normal;
+    border-radius: 30px;
+    border: 1px solid #8b8b8b;
+    z-index: 1000;
+    background-color: #fff;
+    background: -moz-linear-gradient(top, #efefef, #fff);
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#efefef), to(#fff));
+    background: -webkit-linear-gradient(top, #efefef, #fff);
+    background: -o-linear-gradient(top, #efefef, #fff);
+    background: linear-gradient(to bottom, #efefef, #fff);
+
+    &:after {
+      content: "\e258";
+      font-family: 'Glyphicons Halflings';
+      display: inline-block;
+      float: right;
+      position: absolute;
+      right: 5px;
+      top: 7px;
+    }
+  }
+
+  .options {
+    -webkit-transition: max-height 0.15s linear;
+    -moz-transition: max-height 0.15s linear;
+    -o-transition: max-height 0.15s linear;
+    transition: max-height 0.15s linear;
+    max-height: 0;
+    position: absolute;
+    right: 0;
+    left: 2%;
+    z-index: 999;
+    margin: 0 0;
+    padding: 0px 0 0px;
+    list-style: none;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    top: 19px;
+    width: 94%;
+    overflow-y: auto;
+
+    li {
+      margin: 0 0;
+      padding: 0 10px 2px;
+
+      &:hover {
+        background-color: $newBrandPurple;
+        color: white;
+      }
+
+      &:first-child {
+        margin-top: 16px;
+      }
+    }
+  }
+}
